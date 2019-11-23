@@ -37,20 +37,20 @@ disqus:
 
 # if you don't have any of social below, comment the line
 #facebook: myfacebook
-twitter: https://twitter.com/terry_weightang
+twitter: terry_weightang
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
 # linkedin: mylinkedin
 # youtube: myyoutube
 # spotify: myspotify
-github: https://github.com/Weightang
+github: Weightang
 # gitlab: mygitlab
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
 # reddit: username
-medium: https://medium.com/@weightang
+medium: @weightang
 # vimeo: myvimeo
 # lanyrd: mylanyrd
 email: weightang@gmail.com
@@ -73,10 +73,10 @@ width: normal
 # paginate_path: "blog/:num/"
 
 # if you don't need projects, comment the *projects* configs below
-projects: true
+projects: false
 
 # if you don't need "about" or "blog", comment them out below
-about: true
+about: false
 blog: true
 
 # do you want to show the "read time" of the posts?
