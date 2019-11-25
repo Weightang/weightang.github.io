@@ -1,116 +1,76 @@
-# main text of home
-name: 三爻
-bio: 记录自己的一些感想和技术相关内容的博客
+encoding: utf-8
 
-# twitter summary info
-description: 记录自己的一些感想和技术相关内容的博客
+# SEO相关信息
+title: TMaize Blog
+description: TMaize的个人博客
+keywords: TMaize,Blog,Java,Html,JavaScript
+author: TMaize
+footerText: 'Copyright © 2016 皖ICP备16016174号'
 
-# if it's an external image, update below for true
-# better with square images
-#头像
-external-image: false
-picture: assets/images/profile.jpeg
+# 这些不要动
+permalink: /posts/:year/:month/:day/:title.html
+kramdown:
+  auto_ids: true
+  input: GFM
+exclude: ['CNAME', 'README.md', 'LICENSE', 'build']
 
-# If you want to include your resume, set to true
-# and specify source (external or local).
-#简历
-resume: false
-resume-external: false
-resume-url: https://google.com/?q=my+resume
+# 域名配置
+# baseUrl配置,如果网站部署在根目录下的其他目录中，请设置为 /目录名
+domainUrl: 'http://blog.tmaize.net'
+baseUrl: ''
 
-url: https://weightang.github.io/
-# your url: http://USERNAME.github.io
+# 吐个槽地址，会在chat页面中重定向到该地址
+tucaoUrl: https://support.qq.com/product/86335
 
-permalink: /:title/
+# 菜单
+menu:
+  - title: 首页
+    url: /
+  - title: 归类
+    url: /pages/categories.html
+  - title: 搜索
+    url: /pages/search.html
+  - title: 友链
+    url: /pages/links.html
+  - title: 留言
+    url: /pages/chat.html
+  - title: 关于
+    url: /pages/about.html
 
-# To enable google analytics, supply your token below
-# analytics-google: 'UA-MYANALYTICS'
+# 自定义插件
+# plugin-mta-stats
+# 腾讯移动分析(https://mta.qq.com)，如果需要请申请自己的，不需要的话 use 请设置为 false
+# plugin-baidu-push
+# 百度收录自动推送，不需要的话 use 请设置为 false
+# plugin-click-effect
+# 页面点击，出现核心主义价值观
+# plugin-mathjax
+# 数学公式支持，比较影响加载速度，请设置为 false
+customPlugins:
+  - use: true
+    file: 'plugin-mta-stats.html'
+    sid: 500581966
+    cid: 500581972
+  - use: true
+    file: 'plugin-baidu-push.html'
+  - use: true
+    file: 'plugin-click-effect.html'
+  - use: false
+    file: 'plugin-mathjax.html'
 
-# To enable piwik tracking, supply your url & site ID below
-# analytics-piwik-url: 'piwik.my-host.com'
-# analytics-piwik-id: 1
-
-# if you don't want comments in your posts, leave categories empty
-disqus:
-  shortname: mydisqus # enter this from your disqus account
-  categories: [blog, project] # only show disqus for posts that have these categories
-
-# if you don't have any of social below, comment the line
-#facebook: myfacebook
-twitter: terry_weightang
-# google: mygoogle
-# instagram: myinstagram
-# pinterest: mypinterest
-# linkedin: mylinkedin
-# youtube: myyoutube
-# spotify: myspotify
-github: Weightang
-# gitlab: mygitlab
-# lastfm: mylastfm
-# stackoverflow: 7044681/mystackoverflow
-# quora: userquora
-# reddit: username
-medium: weightang
-# vimeo: myvimeo
-# lanyrd: mylanyrd
-email: weightang@gmail.com
-
-authors:
-    johndoe:
-        name: 三爻
-        bio: A Man who travels the world eating noodles
-        external-image: false
-        picture: assets/images/profile.jpeg
-        twitter: terry_weightang
-
-# do you want a larger site? change the option below
-# options: [normal, large] | default: normal
-# normal = 560px / large = 810px
-width: normal
-
-# if you don't need pagination, comment the *paginate* configs below
-# paginate: 5
-# paginate_path: "blog/:num/"
-
-# if you don't need projects, comment the *projects* configs below
-projects: false
-
-# if you don't need "about" or "blog", comment them out below
-about: false
-blog: true
-
-# do you want to show the "read time" of the posts?
-read-time: true
-
-# do you want to show the "tags" inside the posts?
-show-tags: true
-
-# related posts inside a post?
-related: true
-
-# Display links for next and previous posts for the specified categories
-post-advance-links: [blog]
-
-# show author block at the end of a post ?
-show-author: true
-
-# do you want some animations?
-animation: true
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-admin
-
-jekyll-mentions:
-    base_url: https://github.com
-
-compress_html:
-    ignore:
-        envs:
-        - development
-        - stage
-
-exclude: ["travis.sh", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "FAQ.md"]
+# 友情链接
+links:
+  - title: TMaize的个人博客
+    url: http://blog.tmaize.net
+  - title: 文科中的技术宅
+    url: https://www.townwang.com
+  - title: Auuu Nya Blog
+    url: http://mu1er.cn
+  - title: 春风十里
+    url: https://www.geek-era.com
+  - title: 阿川的个人博客
+    url: https://achuan.io
+  - title: 魏文成博客
+    url: https://www.wwc.ren
+  - title: 06m
+    url: https://www.06m.me

@@ -1,66 +1,82 @@
-<p align="center">
-    <h2 align="center">Indigo Minimalist Jekyll Template - <a href="http://sergiokopplin.github.io/indigo/">Demo</a> · <a href="https://travis-ci.org/sergiokopplin/indigo"><img src="https://camo.githubusercontent.com/5393485b732749b3499264168fa8af60166071e8/68747470733a2f2f7472617669732d63692e6f72672f73657267696f6b6f70706c696e2f696e6469676f2e7376673f6272616e63683d67682d7061676573" alt="Build Status" data-canonical-src="https://travis-ci.org/sergiokopplin/indigo.svg?branch=gh-pages" style="max-width:100%;"></a></h2>
-</p>
+# 介绍
 
-<p align="center">This is a simple and minimalist template for Jekyll for those who likes to eat noodles.</p>
+一款 jekyll 主题（[GitHub 地址](https://github.com/TMaize/tmaize-blog)），简洁纯净(主题资源请求<20KB)，未引入任何框架，秒开页面，支持自适应，支持全文检索
 
-***
+你可以到[TMaize Blog](http://blog.tmaize.net/)查看主题效果，欢迎添加友链
 
-<p align="center">
-    <b><a href="README.md#what-has-inside">What has inside</a></b>
-    |
-    <b><a href="README.md#setup">Setup</a></b>
-    |
-    <b><a href="README.md#settings">Settings</a></b>
-    |
-    <b><a href="README.md#how-to">How to</a></b>
-</p>
+# 版本说明
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png" />
-</p>
+主题更新帮助
 
-## What has inside
+1. 备份`_config.yml, posts, _posts, CNAME`文件，然后删除整个项目目录(.git 不要删)
 
-- [Jekyll](https://jekyllrb.com/), [Sass](http://sass-lang.com/) ~[RSCSS](http://rscss.io/)~ and [SVG](https://www.w3.org/Graphics/SVG/)
-- Tests with [Travis](https://travis-ci.org/)
-- Google Speed: [98/100](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F);
-- No JS. :sunglasses:
+2. 下载 [release](https://github.com/TMaize/tmaize-blog/releases)的最新版本，解压到你的项目中
 
-## Setup
+3. 删除`posts, _posts, CNAME`文件，把刚刚备份的再复制回来
 
-0. :star: to the project. :metal:
-2. Fork the project [Indigo](https://github.com/sergiokopplin/indigo/fork)
-3. Edit `_config.yml` with your data (check <a href="README.md#settings">settings</a> section)
-4. Write some posts :bowtie:
+4. 打开备份的`_config.yml`和最新的`_config.yml`,对比配置把一些配置项复制回来
 
-If you want to test locally on your machine, do the following steps also:
+5. 提交 git，主题更新到最新 😎
 
-1. Install [Jekyll](http://jekyllrb.com), [NodeJS](https://nodejs.org/) and [Bundler](http://bundler.io/).
-2. Clone the forked repo on your machine
-3. Enter the cloned folder via terminal and run `bundle install`
-4. Then run `bundle exec jekyll serve --config _config.yml,_config-dev.yml`
-5. Open it in your browser: `http://localhost:4000`
-6. Test your app with `bundle exec htmlproofer ./_site`
-7. Do you want to use the [jekyll-admin](https://jekyll.github.io/jekyll-admin/) plugin to edit your posts? Go to the admin panel: `http://localhost:4000/admin`. The admin panel will not work on GitHub Pages, [only locally](https://github.com/jekyll/jekyll-admin/issues/341#issuecomment-292739469).
+## V1.0
 
-## Settings
+- 精简代码 35 files changed, 829 insertions(+), 1043 deletions(-)
 
-You must fill some informations on `_config.yml` to customize your site.
+- 整体样式细节调整，移动端自动引入 Consolas 字体
 
-```
-name: John Doe
-bio: 'A Man who travels the world eating noodles'
-picture: 'assets/images/profile.jpg'
-...
+- menu 改成中文，取消移动端 menu 的 fix 布局
 
-and lot of other options, like width, projects, pages, read-time, tags, related posts, animations, multiple-authors, etc.
-```
+- `_data` 的配置文件移动到`_config.yml` 中
 
-## How To?
+- 修复全局搜索不支持尖括号
 
-Check the [FAQ](./FAQ.md) if you have any doubt or problem.
+- 删除留言板，切换到吐个槽
 
+## V1.1
+
+- 移动 sitemap.xml,search.xml 到`static/xml`
+
+- 新增 RSS 订阅
+
+## V1.2
+
+- 样式微调
+
+- 修复一个全局搜索的 bug
+
+# 项目配置
+
+1. 如果使用自己的域名，`CNAME`文件里的内容请换成你自己的域名，然后 CNAME 解析到`用户名.github.com`
+
+2. 如果使用 GitHub 的的域名，请删除`CNAME`文件,然后把你的项目修改为`用户名.github.io`
+
+3. 修改`pages/about.md`中关于我的内容
+
+4. 修改`_config.yml`文件，具体作用请参考注释
+
+5. 清空`post _posts`目录下所有文件，注意是清空，不是删除这两个目录
+
+6. 网站的 logo 和 favicon 放在了`static/img/`下，替换即可，大小无所谓，图片比例最好是 1:1
+
+7. 如果你是把项目 fork 过去的，想要删除我的提交记录可以先软重置到第一个提交，然后再提交一次，最后强制推送一次就行了
+
+# 使用
+
+文章放在`_posts`目录下，命名为`yyyy-MM-dd-xxxx-xxxx.md`，内容格式如下
+
+```yaml
 ---
+layout: mypost
+title: 标题
+categories: [分类1, 分类2]
+---
+文章内容，Markdown格式
+```
 
-[MIT](http://kopplin.mit-license.org/) License © Sérgio Kopplin
+文章资源放在`posts`目录，如文章文件名是`2019-05-01-theme-usage.md`，则该篇文章的资源需要放在`posts/2019/05/01`下,在文章使用时直接引用即可。当然了，写作的时候会提示资源不存在忽略即可
+
+```md
+![这是图片](xxx.png)
+
+[xxx.zip 下载](xxx.zip)
+```
