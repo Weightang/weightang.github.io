@@ -11,11 +11,7 @@ title: 关于我
 
 ## 相关技能
 
-- 熟悉 Kotlin,Java 语言,Vue 框架的使用
-
-- Android开发者
-
-- 能够使用 Git/SVN 对代码版本进行控制
+- Android，vue,Flutter 开发 
 
 ## 联系我
 
