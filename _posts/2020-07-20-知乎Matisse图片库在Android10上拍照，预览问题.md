@@ -12,7 +12,7 @@ Android上的文件管理混乱一直是诟病，用户也基本上看着Android
 
 最近升级了 build.gradle 文件中的targetSdk从28升到29了，测试人员在测试拍照图片选择时，Android10上出现了crash,网上搜索上大部分说是在AndroidManifest.xml 中 application 标签中添加android:requestLegacyExternalStorage="true", 就选择退出分区存储，应用就可以继续运行了，但是这是个取巧的方法，在Android11 上这个方法就失效了，官网上也给出一个解决方案改用 preserveLegacyExternalStorage =“true”,也是可以的，但是还是要注意重新安装的应用，
 
-[图片](01.jpeg)
+![图片](01.jpeg)
 
 为了以后能有更好的体验还是要去解决分区存储模型的使用。
 
