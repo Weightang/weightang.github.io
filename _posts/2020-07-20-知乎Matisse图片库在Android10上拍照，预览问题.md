@@ -1,7 +1,7 @@
 ---
 layout: mypost
-title: 对MVP架构的一些理解
-categories: [Android]
+title: Android10拍照的一些问题
+categories: [Android10]
 ---
 
 ### 前言
